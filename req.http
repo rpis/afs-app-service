@@ -1,6 +1,19 @@
 
-#@baseUrl =http://localhost:3000
-@baseUrl = https://afs-app-service.azurewebsites.net
+@baseUrl =http://localhost:3000
+#@baseUrl = https://afs-app-service.azurewebsites.net
 get {{baseUrl}}/
+
+###
+
+get {{baseUrl}}/1
+
+###
+post {{baseUrl}}/
+
+{
+    "id": "3",
+    "name": "Iza córka bella",
+    "email": "sw@wp.pl"
+}
 
 
