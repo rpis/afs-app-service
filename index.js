@@ -1,11 +1,13 @@
 const { CosmosClient } = require("@azure/cosmos");
+const { DefaultAzureCredential } = require("@azure/identity");
 const http = require("http");
 const port = process.env.PORT || 3000
 
 let container = null;
-const cosmosClient = new CosmosClient(
-    process.env.COSMOSDB_CONNECTION_STRING,
-);
+const cosmosClient = new CosmosClient({
+    endpoint: process.env.COSMOSDB_CONNECTION_STRING,
+    credential: new DefaultAzureCredential()
+});
 
 const requestListener = async function (req, res) {
     console.log("Call service :", req.method, req.url);
