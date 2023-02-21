@@ -1,6 +1,6 @@
 
-@baseUrl =http://localhost:3000
-#@baseUrl = https://afs-app-service.azurewebsites.net
+#@baseUrl =http://localhost:3000
+@baseUrl = https://afs-app-service.azurewebsites.net
 get {{baseUrl}}/
 
 ###

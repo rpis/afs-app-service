@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000
 let container = null;
 const cosmosClient = new CosmosClient({
     endpoint: process.env.COSMOSDB_CONNECTION_STRING,
-    credential: new DefaultAzureCredential()
+    aadCredentials: new DefaultAzureCredential()
 });
 
 const requestListener = async function (req, res) {
